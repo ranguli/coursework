@@ -12,30 +12,15 @@
 \reversemarginpar
 \setlength{\marginparsep}{-15mm}
 
-\newenvironment{tabbedenum}[1]
- {\NumTabs{#1}\inparaenum\let\latexitem\item
-  \def\item{\def\item{\tab\latexitem}\latexitem}}
- {\endinparaenum}
-
-\newcommand{\rmv}[1]{}
-\newcommand{\bemph}[1]{{\bfseries\itshape#1}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\imply}{\to}
-\newcommand{\bic}{\leftrightarrow}
-
-% Here the user must define certain strings for this homework assignment
-%
-\def\CourseCode{COMP 1002}		% e.g. 38
-\def\AssignmentNo{1}			% e.g. 1
-\def\DateHandedOut{Winter, 2017}	% e.g. September 18, 2002
-\def\DateDue{January 25, 2017}		% e.g. October 1, 2002
-\def\TimeDue{11:59pm}			% e.g. 11 am
+\def\CourseCode{COMP 1002}	
+\def\AssignmentNo{1}		
+\def\DateHandedOut{Winter, 2018}
+\def\DateDue{January 25, 2018}	
+\def\TimeDue{11:59pm}			
 
 \begin{document}
 
 \noindent
-\rmv{Computer Science }
 \CourseCode \hfill \DateHandedOut\\
 
 \begin{center}
@@ -44,25 +29,19 @@ Due: \DateDue, by \TimeDue\\
 
 \textbf{Joshua Murphy} \\
 \end{center}
-\hrule\smallskip
+\hrule\smallskip 
 
-\begin{tabbedenum}{2}
-\item{ {\em Solution:} $(p \wedge \neg (\neg p \vee q)) \vee (p \wedge q) )$
-    
-    hello } 
-\item{ {\em Solution: $(p \wedge \neg (\neg p \vee q)) \vee (p \wedge q) )$}} 
-\end{tabbedenum}
+\begin{enumerate}
+        \item Provide a silly solution for a silly question: 
+            \begin{enumerate}
+                \item {\em Solution:} \\ $(p \wedge \neg (\neg p \vee q)) \vee (p \wedge q))$
+                \item {\em Solution:} \\ $(p \vee q)) \vee (p \wedge q))$
+                \item {\em Solution:} \\ $( q)) \vee (p \wedge q))$
+                \item {\em Solution:} \\ $(g (\neg p \vee q)) \vee (p \wedge q))$
+    \end{enumerate}
+\end{enumerate}
 
 \bigskip
 
-\NumTabs{2}
-\begin{inparaenum}
-\item text
-\tab\item text
-\tab\item text
-\tab\item text
-\tab\item text
-\tab\item text   
-\end{inparaenum}
 
 \end{document} 
