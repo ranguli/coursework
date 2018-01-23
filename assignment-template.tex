@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,epsfig,paralist,tabto}
+
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.575in}
+\setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\evensidemargin}{-.25in}
+
+\setlength{\parindent}{0mm}
+
+\reversemarginpar
+\setlength{\marginparsep}{-15mm}
+
+\newenvironment{tabbedenum}[1]
+ {\NumTabs{#1}\inparaenum\let\latexitem\item
+  \def\item{\def\item{\tab\latexitem}\latexitem}}
+ {\endinparaenum}
+
+\newcommand{\rmv}[1]{}
+\newcommand{\bemph}[1]{{\bfseries\itshape#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\imply}{\to}
+\newcommand{\bic}{\leftrightarrow}
+
+% Here the user must define certain strings for this homework assignment
+%
+\def\CourseCode{COMP 1002}		% e.g. 38
+\def\AssignmentNo{1}			% e.g. 1
+\def\DateHandedOut{Winter, 2017}	% e.g. September 18, 2002
+\def\DateDue{January 25, 2017}		% e.g. October 1, 2002
+\def\TimeDue{11:59pm}			% e.g. 11 am
+
+\begin{document}
+
+\noindent
+\rmv{Computer Science }
+\CourseCode \hfill \DateHandedOut\\
+
+\begin{center}
+Homework Assignment \#\AssignmentNo\\
+Due: \DateDue, by \TimeDue\\
+
+\textbf{Joshua Murphy} \\
+\end{center}
+\hrule\smallskip
+
+\begin{tabbedenum}{2}
+\item{ {\em Solution:} $(p \wedge \neg (\neg p \vee q)) \vee (p \wedge q) )$
+    
+    hello } 
+\item{ {\em Solution: $(p \wedge \neg (\neg p \vee q)) \vee (p \wedge q) )$}} 
+\end{tabbedenum}
+
+\bigskip
+
+\NumTabs{2}
+\begin{inparaenum}
+\item text
+\tab\item text
+\tab\item text
+\tab\item text
+\tab\item text
+\tab\item text   
+\end{inparaenum}
+
+\end{document} 
