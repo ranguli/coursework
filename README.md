@@ -1,5 +1,5 @@
 # latex-homework
-Templates for homework, assignments, labs, in LaTeX
+Templates for homework, assignments, and labs, in LaTeX
 
 ![](latex.png)
 
