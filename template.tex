@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,fullpage,listings}
+
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.575in}
+\setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\evensidemargin}{-.25in}
+
+\reversemarginpar
+\setlength{\marginparsep}{-15mm}
+
+\newcommand{\bemph}[1]{{\bfseries\itshape#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\imply}{\to}
+\newcommand{\bic}{\leftrightarrow}
+
+% Here the user must define certain strings for this homework assignment
+%
+\def\CourseCode{COURSE 1001}		% e.g. B38
+\def\AssignmentNo{1}			% e.g. 1
+\def\DateHandedOut{Winter, 2018}	% e.g. September 18, 2002
+\def\DateDue{January 25, 2018}		% e.g. October 1, 2002
+\def\TimeDue{11:59pm}			% e.g. 11 am
+\def\Name{John Doe}
+\def\StudentNumber{2048195}
+
+\begin{document}
+
+\noindent
+\CourseCode \hfill \DateHandedOut\\
+
+\begin{center}
+Homework Assignment \#\AssignmentNo\\
+Due: \DateDue, by \TimeDue\\
+
+
+
+\textbf{\Name  (ID: \StudentNumber) } \\
+
+%Student Email:%
+mystudentemail@uni.edu.ca
+\end{center}
+
+\hrule\smallskip
+
+
+% 
+\begin{enumerate} 
+\item \textbf{A simple equation answer} \marginpar{}
+\begin{enumerate}
+\item
+{\em Solution: \\ 
+    \( B \leftrightarrow \neg A \wedge \neg C  \\
+       C \leftrightarrow \neg B \wedge A 
+        \)
+            
+} 
+\end{enumerate}
+
+%  
+\item \textbf{Logic Truth Table} \marginpar{}
+\begin{enumerate} 
+\item {\em Solution: \\ 
+    $(\neg P \wedge \neg Q \wedge R)
+    \vee (Q \wedge R) \vee (P \wedge R) $
+
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|c|}
+            P & Q & R & (\neg P \wedge \neg Q \wedge R) & (Q 
+            \wedge R) & (P \wedge R) & (\neg P \wedge \neg Q
+            \wedge R) \vee (Q \wedge R) \vee (P \wedge R)\\ 
+            \hline 
+
+            T & T & T & F & T & T & T  \\
+            T & F & T & F & T & T & T  \\ 
+            F & F & T & T & F & F & T  \\
+            F & T & T & F & T & T & T  \\
+            
+        \end{array}
+    \end{displaymath}
+
+}
+% 
+\item {\em Solution: \\ 
+    $ (P \wedge Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q) \vee (\neg P
+        \wedge \neg Q) $
+    
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|}
+            
+            P & Q & (P \wedge Q) & (\neg P \wedge Q) & (P \wedge \neg Q) & (\neg P
+            \wedge \neg Q) \\
+            \hline 
+
+            T & T & T & F & F & F    \\
+            T & F & F & F & T & T    \\ 
+            F & T & F & T & F & F    \\
+            F & F & F & F & F & T    \\
+            
+        \end{array}
+    \end{displaymath}
+
+}
+\end{enumerate} 
+
+
+%  
+\item \textbf{Equations with workings} \marginpar{}\\
+\begin{enumerate} 
+\item {\em Solution: \\ 
+
+    \( \neg (P \to P \wedge Q) \wedge Q  \\
+       \neg ( (\neg P \vee P) \wedge Q) \wedge Q \\
+       \neg (T \wedge Q) \wedge Q \\
+       F \vee \neg Q \wedge Q \\
+       F \vee F \\
+       F\)
+}
+\item {\em Solution: \\ 
+
+    \( (T \to P) \wedge (P \to F) \\
+       ( \neg T \vee P) \wedge (\neg P \vee F) \\
+        ( F \vee P) \wedge (\neg P \vee F) \\ 
+        P \wedge \neg P \\
+        F \)
+
+}
+\end{enumerate} 
+%
+
+%  
+\item \textbf{Simple one-line response or word problem} \marginpar{}\\
+\begin{enumerate} 
+\item {\em Solution: \\ 
+    1. If Toronto, then Niagara Falls \\
+    2. If not Montreal, then not Niagara Falls. \\
+    3. Not Montreal and Toronto, but either or. \\
+}
+\end{enumerate} 
+%
+
+%  
+\item \textbf{One function snippet} \marginpar{}\\
+\begin{enumerate} 
+\item {\em Solution: \\ 
+
+\begin{lstlisting}
+Get values for X, list L.
+FPOS and IND equal -1.
+While FPOS equals -1 and IND is not -1,
+    if LIND equals X then,
+        FPOS equals IND.
+    otherwise,
+        IND increases by one
+return FPOS.
+\end{lstlisting}
+}
+
+\end{enumerate} 
+%
+
+%  
+\item \textbf{Mid-sized code snippet} \marginpar{}\\
+\begin{enumerate} 
+\item {\em Solution: \\ 
+
+\begin{lstlisting}
+Get list L containing 15 pairs of numbers, 
+Where n is the number of elements in L.
+
+WINS, TIES, LOSSES = 0
+IND = 1
+
+while (IND $\leq$ n) 
+    If $L_{IND}$ > $L_{IND}$ + 1, increase LOSSES by one 
+    If $L_{IND}$ = $L_{IND}$ + 1, increase TIES by one 
+    Else, increase WINS by one 
+    Increase IND by two.
+
+Print "WINS, LOSSES, TIES"
+If WINS = 15 and LOSSES and TIES both equal 0:
+    Say, "Congratulations on an undefeated season."
+\end{lstlisting}
+}
+
+\end{enumerate} 
+%
+
+\end{enumerate} 
+\end{document}  
