@@ -1,3 +1,6 @@
 [submodule "pandoc-templates"]
 	path = pandoc-templates
 	url = https://github.com/jgm/pandoc-templates/
+[submodule "posc1000"]
+	path = posc1000
+	url = https://github.com/ranguli/posc1000
