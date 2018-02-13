@@ -2,6 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr, amsfonts, amsmath}
+\usepackage{glossaries}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -11,13 +12,43 @@
 \title{COMP 1002 Course Notes}
 \author{Joshua Murphy}
 \date{\today} 
- 
+
+\makeglossaries
+
+\newglossaryentry{Negation}
+{
+    name=Negation,
+    description={The same as saying $NOT$, or using $\neg$ Symbol}
+}
+\longnewglossaryentry{Implication}
+{
+    name=Implication,
+    description={Asserts that $P$ is true on the condition that $Q$ is also true. For example, it can't rain without clouds but it can be cloudy without rain.}
+}
+
 \begin{document}
 \maketitle
 \tableofcontents{}
 \pagebreak
 
-\section{Previou Section??}
+\section{Stuff}
+\subsection{Implication}
+\begin{equation}
+p \to q \end{equation}
+This is read as ``\textit{p implies q.}'' In this case $P$ = it is raining, 
+and $Q$ = there are clouds. \gls{Implication}
+Insert truth table
+
+\subsection{Biconditional}
+\begin{equation}
+p \iff q \end{equation}
+This is read as ``\textit{p if and only if q.}'' Both $P$ and $Q$ must be the
+same value. This differs from $\wedge$ in which both values must be
+\textit{true.} For example, $P$ = taking a flight and $Q$ = buying a ticket. It
+is false when they have opposite values. You can take the flight if and only if
+you buy a ticket.
+
+\section{Hmm}
 \subsection{Canonical CNF}
 
 $\equiv \in \notin \emptyset \forall \exists \rightarrow \leftrightarrow \sigma
@@ -50,6 +81,19 @@ Susan is not a bankteller:
  Susan \notin Banktellers 
 \end{equation}
 
-\subsubsection{Test}
- 
+Deductive Arguments:
+    An argument is valid if the premises can’t all be true without the conclusion also being true.
+    An argument is valid if the truth of all its premises forces the conclusion to be true.
+    An argument is valid if it would be inconsistent for all its premises to be true and its conclusion to be false.
+    An argument is valid if its conclusion follows with certainty from its premises.
+    An argument is valid if it has no counterexample, that is, a possible situation that makes all the premises true and the conclusion false.
+
+Modus Ponens: If it is a car, then it has wheels. It is a car. Therefore, it has wheels. 
+
+Modus tollens: If it is a car, then it has wheels. It does not have wheels. Therefore, it is not a car.
+
+
+\subsection{Test}
+Here I talked about \gls{Negation} and 
+\printglossaries
 \end{document}
