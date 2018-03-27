@@ -1,0 +1,38 @@
+\documentclass[titlepage]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsfonts} 
+\usepackage{amsmath}
+\usepackage{glossaries}
+\usepackage[colorlinks]{hyperref}
+\usepackage{venndiagram}
+\usepackage{tikz}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Joshua Murphy}
+\lhead{Course Notes - COMP 1002}
+\rfoot{Page \thepage}
+\title{COMP 1002 Survival Guide}
+\author{Joshua Murphy}
+\date{\today}
+\include{glossary}
+\makeglossaries
+\begin{document}
+\maketitle
+\tableofcontents{}
+\pagebreak
+
+
+% Begin section on propositional logic 
+\include{propositional_logic}
+
+% Begin section of Predicates, quantifiers and sets.
+\include{predicates_quantifiers_sets}
+
+% Import rest of sections here . . . 
+% \include{cool}
+
+\printglossaries
+\end{document}

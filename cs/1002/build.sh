@@ -1,0 +1,3 @@
+pdflatex comp1002_survival_guide.tex
+makeglossaries comp1002_survival_guide
+pdflatex comp1002_survival_guide.tex
