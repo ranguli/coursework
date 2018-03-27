@@ -1,4 +1,4 @@
-# courework
+# coursework
 ![](latex.png)
 
 All of my coursework (notes, homework, assignments, papers and labs) from my Computer Science undergrad at Memorial University of Newfoundland, from the Winter of 2018 onwards. 
